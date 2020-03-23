@@ -31,7 +31,7 @@ class Rational_number
 
 				friend Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2);
 
-				friend Rational_number operator - (Rational_number const& numar, Rational_number const& numar2);
+				friend Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2);
 
 
 

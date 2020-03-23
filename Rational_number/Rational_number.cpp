@@ -70,7 +70,6 @@ void Rational_number::print()
 	}
 
 	Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2)
-
 	{
 		Rational_number numar3;
 		numar3.numerator = numar1.numerator * numar2.denominator;
@@ -79,10 +78,14 @@ void Rational_number::print()
 		return numar3;
  	}
 
+	Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2)
+	{
+		Rational_number numar3;
+		numar3.numerator = numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator;
+		numar3.denominator = numar1.denominator * numar2.denominator;
 
-
-
-
+		return numar3;
+	}
 
 
 
