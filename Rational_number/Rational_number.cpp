@@ -57,7 +57,7 @@ void Rational_number::print()
 		numar3.numerator = numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator;
 	    numar3.denominator = numar1.denominator * numar2.denominator;
 		
-		return numar3;
+		return Rational_number(numar3.numerator, numar3.denominator);
 	}
 
 	Rational_number operator * (Rational_number const& numar1, Rational_number const& numar2)
@@ -66,7 +66,7 @@ void Rational_number::print()
 		numar3.numerator = numar1.numerator * numar2.numerator;
 		numar3.denominator = numar1.denominator * numar2.denominator;
 
-		return numar3;
+		return (Rational_number(numar3.numerator, numar3.denominator));
 	}
 
 	Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2)
@@ -75,7 +75,7 @@ void Rational_number::print()
 		numar3.numerator = numar1.numerator * numar2.denominator;
 		numar3.denominator = numar1.denominator * numar2.numerator;
 
-		return numar3;
+		return Rational_number(numar3.numerator, numar3.denominator);
  	}
 
 	Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2)
@@ -84,48 +84,36 @@ void Rational_number::print()
 		numar3.numerator = numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator;
 		numar3.denominator = numar1.denominator * numar2.denominator;
 
-		return numar3;
+		return Rational_number(numar3.numerator, numar3.denominator);
 	}
 
+	
+	int Rational_number::gcd(Rational_number numar1)
+	{
+		if (numar1.denominator < 0)
 
+			numar1.denominator = -numar1.denominator;
 
+		if (numar1.numerator < 0)
 
+			numar1.numerator = -numar1.numerator;
 
+		while (numar1.denominator != numar1.numerator)
+		{
+			if (numar1.denominator > numar1.numerator)
 
+				numar1.denominator -= numar1.numerator;
 
+			else
+			{
+				numar1.numerator -= numar1.denominator;
+			}
+		}
+		return numar1.denominator;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Rational_number Rational_number::add(Rational_number numar) //  4/3+5/4
-{
-		Rational_number r;
-		r.numerator = numar.numerator * denominator + numerator * numar.denominator;
-	    r.denominator = numar.denominator * denominator;
-
-		return r;
- */
-
-
-	/*return Rational_number(numar.getter_num() * numar2.getter_den() + numar2.getter_num() * numar.getter_den(), */
+	Rational_number Rational_number::simply(Rational_number numar)
+	{
+		int d = gcd(numar);
+		return Rational_number(numar.numerator / d, numar.denominator / d);
+	}
