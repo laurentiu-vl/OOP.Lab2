@@ -2,7 +2,7 @@
 #include "Rational_number.h"
 using namespace std;
 
-Rational_number::Rational_number()
+Rational_number::Rational_number() //constructor
 {
 
 }
@@ -33,7 +33,7 @@ void Rational_number::setter_num(int y)
 	this->numerator = y;
 }
 
-void Rational_number::print()
+void Rational_number::print() //print the number; more cases to check
 {
 	if (denominator == 0)
 		cout << "Not possible";
@@ -54,13 +54,13 @@ void Rational_number::print()
 	Rational_number operator + (Rational_number const &numar1, Rational_number const &numar2) 
 	{
 		Rational_number numar3;
-		numar3.numerator = numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator;
+		numar3.numerator = numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator; //overload the operator with +
 	    numar3.denominator = numar1.denominator * numar2.denominator;
 		
 		return Rational_number(numar3.numerator, numar3.denominator);
 	}
 
-	Rational_number operator * (Rational_number const& numar1, Rational_number const& numar2)
+	Rational_number operator * (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with *
 	{
 		Rational_number numar3;
 		numar3.numerator = numar1.numerator * numar2.numerator;
@@ -69,7 +69,7 @@ void Rational_number::print()
 		return (Rational_number(numar3.numerator, numar3.denominator));
 	}
 
-	Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2)
+	Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with /
 	{
 		Rational_number numar3;
 		numar3.numerator = numar1.numerator * numar2.denominator;
@@ -78,17 +78,17 @@ void Rational_number::print()
 		return Rational_number(numar3.numerator, numar3.denominator);
  	}
 
-	Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2)
+	Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with -
 	{
 		Rational_number numar3;
 		numar3.numerator = numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator;
 		numar3.denominator = numar1.denominator * numar2.denominator;
 
-		return Rational_number(numar3.numerator, numar3.denominator);
+		return (Rational_number(numar3.numerator, numar3.denominator));
 	}
 
 	
-	int Rational_number::gcd(Rational_number numar1)
+	int Rational_number::gcd(Rational_number numar1) //find the common div of denominator and numerator
 	{
 		if (numar1.denominator < 0)
 
@@ -115,5 +115,5 @@ void Rational_number::print()
 	Rational_number Rational_number::simply(Rational_number numar)
 	{
 		int d = gcd(numar);
-		return Rational_number(numar.numerator / d, numar.denominator / d);
+		return Rational_number(numar.numerator / d, numar.denominator / d);  //simplify the rational number
 	}
