@@ -1,18 +1,22 @@
 #include <iostream>
+#include <cassert>
 #include "Rational_number.h"
 #include "Main_f.h"
+#include "Test.h"
 using namespace std;
 
 
 int main()
 {
+	test();
+
 	add();
 
-	multi();
+	//multi();
 
-	divi();
+	//divi();
 
-	decre();
+	//decre();
 
 
 	Rational_number numar(5, 5);

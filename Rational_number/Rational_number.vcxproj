@@ -141,10 +141,12 @@
     <ClCompile Include="Main_f.cpp" />
     <ClCompile Include="Rational_main.cpp" />
     <ClCompile Include="Rational_number.cpp" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main_f.h" />
     <ClInclude Include="Rational_number.h" />
+    <ClInclude Include="Test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
