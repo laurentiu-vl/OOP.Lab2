@@ -13,6 +13,7 @@ int main()
 
 	//Sorting an array of complex numbers by absolute value
 	cout << "TEST sort" << endl;
+
 	Complex aux;
 	for (int i = 0; i < len ; i++)
 		for (int j = i; j < len; j++)
@@ -34,6 +35,7 @@ int main()
 
 	// Calulating sum of an array of complex numbers
 	cout << "TEST sum" << endl;
+	
 	Complex sum;
 	for (int i = 0; i < len; i++)
 		sum = sum.add(v[i]);
