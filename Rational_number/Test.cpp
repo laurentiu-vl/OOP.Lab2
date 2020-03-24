@@ -2,6 +2,7 @@
 #include <cassert>
 #include "Rational_number.h"
 #include "Test.h"
+#include "Main_f.h"
 using namespace std;
 
 void test()
@@ -38,11 +39,7 @@ void test()
 
 	//(nr1.simply(nr1)).print();
 	Rational_number nr7(2, 1);
-	(nr1.simply(nr1));
+	//(nr1.simply(nr1));
 	//assert((nr1.simply(nr1)).print()== 5);
+
 }
-
-
-
-
-

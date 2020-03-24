@@ -22,7 +22,7 @@ void add()
 	Rational_number number1(numarator2, num2);
 
 	Rational_number number2 = (number + number1);
-	number2.simply(number2);
+	number2 = number2.simply(number2);
 	number2.print();
 	cout << endl;
 }
@@ -45,7 +45,7 @@ void decre()
 	Rational_number number1(numarator2, num2);
 
 	Rational_number number2 = (number - number1);
-	number2.simply(number2);
+	number2 = number2.simply(number2);
 	number2.print();
 	cout << endl;
 }
@@ -68,7 +68,7 @@ void multi()
 	Rational_number number1(numarator2, num2);
 
 	Rational_number number2 = (number * number1);
-	number2.simply(number2);
+	number2 = number2.simply(number2);
 	number2.print();
 	cout << endl;
 }
@@ -91,7 +91,7 @@ void divi()
 	Rational_number number1(numarator2, num2);
 
 	Rational_number number2 = (number / number1);
-	number2.simply(number2);
+	number2 = number2.simply(number2);
 	number2.print();
 	cout << endl;
 }

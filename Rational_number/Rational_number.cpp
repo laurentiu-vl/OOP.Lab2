@@ -88,7 +88,7 @@ void Rational_number::print() //print the number; more cases to check
 	}
 
 	
-	int Rational_number::gcd(Rational_number numar1) //find the common div of denominator and numerator
+	int Rational_number::gcd(Rational_number numar1) //find the gr. common div. of denominator and numerator
 	{
 		if (numar1.denominator < 0)
 

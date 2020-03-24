@@ -10,23 +10,24 @@ int main()
 {
 	test();
 
-	//add();
+	add();
 
-	//multi();
+	multi();
 
-	//divi();
+	divi();
 
-	//decre();
+	decre();
 
 
-	Rational_number numar(5, 5);
-	Rational_number numar1(-19, 1);
-	Rational_number numar2(1,1);
-	Rational_number numar10(10, 2);
+	//Rational_number numar(5, 5);
+	//Rational_number numar1(-19, 1);
+	//Rational_number numar2(1,1);
+	//Rational_number numar10(10, 2);
+	//(numar10.simply(numar10)).print();
 	//numar10.simply(numar10);
 	//numar10.print();
 	//(numar.simply(numar)).print();
 	//numar.simply((numar1 + numar2)).print();
+	
 	return 0;
 }
-
