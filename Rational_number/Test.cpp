@@ -9,6 +9,8 @@ void test()
 {
 	Rational_number nr1(10, 5);   //10   20
 	Rational_number nr2(20, 4);	  //5    4
+	Rational_number nr10(3, 5);
+	Rational_number nr20(2, 2);
 
 	assert(nr1.getter_den()== 5);
 	assert(nr1.getter_num() == 10);
@@ -37,9 +39,6 @@ void test()
 	assert(nr2.gcd(nr2) == 4);
 	//cout << nr1.gcd(nr1);
 
-	//(nr1.simply(nr1)).print();
-	Rational_number nr7(2, 1);
-	//(nr1.simply(nr1));
-	//assert((nr1.simply(nr1)).print()== 5);
+	
 
 }
