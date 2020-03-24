@@ -1,10 +1,14 @@
 #include <iostream>
 #include "complex.h"
 #include "tests.h"
+#include "functii_main.h"
 using namespace std;
 
 int main()
 {
+	//Executing tests for print
+	Tests_to_show();
+
 	//Executing tests
 	Tests();
 
@@ -32,6 +36,7 @@ int main()
 	{
 		v[i].show_compl();
 	}
+	cout << endl;
 
 	// Calulating sum of an array of complex numbers
 	cout << "TEST sum" << endl;

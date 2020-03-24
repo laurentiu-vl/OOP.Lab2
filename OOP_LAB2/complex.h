@@ -42,5 +42,5 @@ public:
 	// polarform of a complex number
 	void compute_polar();
 
-	bool operator== (Complex x);
+	bool operator == (Complex x);
 };

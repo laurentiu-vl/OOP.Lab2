@@ -6,4 +6,6 @@
 #include <vector>
 #include "complex.h"
 
+void Tests_to_show();
+
 void Tests();
