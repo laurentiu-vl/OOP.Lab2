@@ -10,7 +10,7 @@ int main()
 {
 	test();
 
-	add();
+	//add();
 
 	//multi();
 
