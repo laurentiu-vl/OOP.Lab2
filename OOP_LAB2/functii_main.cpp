@@ -4,7 +4,7 @@
 #include "complex.h"
 using namespace std;
 
-void Tests_to_show()
+void Tests_to_show() //Print 
 {
 	Complex a(2, 7);
 	Complex b(3, 4);
@@ -41,9 +41,57 @@ void Tests_to_show()
 	cout << endl;
 
 	cout << "TEST abs" << endl;
-	cout << a.abs() << endl;
+	cout << a.abs();
+	cout << endl;
 
 	cout << "TEST compute_polar" << endl;
 	a.compute_polar();
-
+	cout << endl;
 }
+
+	 void Sort_function() //Sort an array of nr.
+	 {
+		Complex v[5]{ {1, 6}, {3, 5}, {4.2, 3.7}, {0, 0} };
+		int len = 4;
+
+		cout << "TEST sort" << endl;
+
+		Complex aux;
+		for (int i = 0; i < len; i++)
+			for (int j = i; j < len; j++)
+			{
+				double first = v[i].abs();
+				double second = v[j].abs();
+				if (first > second)
+				{
+					aux = v[i];
+					v[i] = v[j];
+					v[j] = aux;
+				}
+			}
+
+		for (int i = 0; i < len; i++)
+		{
+			v[i].show_compl();
+		}
+		cout << endl;
+	 }
+
+
+	 void Summe() //Calulating sum of an array of complex numbers
+	 {
+		 Complex v[5]{ {1, 6}, {3, 5}, {4.2, 3.7}, {0, 0} };
+		 int len = 4;
+
+		 cout << "TEST sum" << endl;
+
+		 Complex sum;
+
+		 for (int i = 0; i < len; i++)
+			sum = sum.add(v[i]);
+
+		 cout << "Sum is equal to: ";
+		 sum.show_compl();
+		 cout << endl;
+
+	 }
