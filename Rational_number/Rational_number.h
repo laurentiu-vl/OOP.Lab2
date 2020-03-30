@@ -7,23 +7,23 @@ class Rational_number
 				int numerator;
 
 		public:
-				Rational_number();
+				Rational_number(); //constructor
 				
-				Rational_number(int, int);
+				Rational_number(int, int); //constructor with values
 				
-				int getter_num();
+				int get_num();  //return numitor
 				
-				int getter_den();
+				int get_den();  //return denominator
 
-				void setter_num(int);
+				//void setter_num(int);
 
-				void setter_den(int);
+				//void setter_den(int);
 
-				void print();
+				void print(); //print number
 
-				void multi(int, int);
+				//void multi(int, int);
 
-				friend Rational_number operator + (Rational_number const&  numar1, Rational_number const&  numar2);
+				friend Rational_number operator + (Rational_number const& numar1, Rational_number const& numar2);
 
 				friend Rational_number operator * (Rational_number const& numar1, Rational_number const& numar2);
 

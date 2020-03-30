@@ -13,17 +13,17 @@ Rational_number::Rational_number(int nr_numarator, int nr_numitor)
 		this->denominator = nr_numitor;
 }
 
-int Rational_number::getter_den()
+int Rational_number::get_den()
 {
 	return denominator;
 }
 
-int Rational_number::getter_num()
+int Rational_number::get_num()
 {
 	return numerator;
 }
 
-void Rational_number::setter_den(int x)
+/*void Rational_number::setter_den(int x)
 {
 	this->denominator = x;
 }
@@ -31,11 +31,11 @@ void Rational_number::setter_den(int x)
 void Rational_number::setter_num(int y)
 {
 	this->numerator = y;
-}
+}*/
 
 void Rational_number::print() //print the number; more cases to check
 {
-	if (denominator == 0)
+	if (denominator == 0)			
 		cout << "Not possible";
 
 	else if ((denominator > 0 && numerator > 0) || (denominator < 0 && numerator < 0))
@@ -51,40 +51,40 @@ void Rational_number::print() //print the number; more cases to check
 }
 
 
-	Rational_number operator + (Rational_number const &numar1, Rational_number const &numar2) 
+	Rational_number operator + (Rational_number const& numar1, Rational_number const& numar2) 
 	{
-		Rational_number numar3;
-		numar3.numerator = numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator; //overload the operator with +
-	    numar3.denominator = numar1.denominator * numar2.denominator;
+		//Rational_number numar3;
+		//numar3.numerator = numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator; //overload the operator with +
+	    //numar3.denominator = numar1.denominator * numar2.denominator;
 		
-		return Rational_number(numar3.numerator, numar3.denominator);
+		return Rational_number(numar1.numerator * numar2.denominator + numar2.numerator * numar1.denominator, numar1.denominator * numar2.denominator);
 	}
 
 	Rational_number operator * (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with *
 	{
-		Rational_number numar3;
-		numar3.numerator = numar1.numerator * numar2.numerator;
-		numar3.denominator = numar1.denominator * numar2.denominator;
+		//Rational_number numar3;
+		//numar3.numerator = numar1.numerator * numar2.numerator;
+		//numar3.denominator = numar1.denominator * numar2.denominator;
 
-		return (Rational_number(numar3.numerator, numar3.denominator));
+		return (Rational_number(numar1.numerator * numar2.numerator, numar1.denominator * numar2.denominator));
 	}
 
 	Rational_number operator / (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with /
 	{
-		Rational_number numar3;
-		numar3.numerator = numar1.numerator * numar2.denominator;
-		numar3.denominator = numar1.denominator * numar2.numerator;
+		//Rational_number numar3;
+		//numar3.numerator = numar1.numerator * numar2.denominator;
+		//numar3.denominator = numar1.denominator * numar2.numerator;
 
-		return Rational_number(numar3.numerator, numar3.denominator);
+		return Rational_number(numar1.numerator * numar2.denominator, numar1.denominator * numar2.numerator);
  	}
 
 	Rational_number operator - (Rational_number const& numar1, Rational_number const& numar2) //overload the operator with -
 	{
-		Rational_number numar3;
-		numar3.numerator = numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator;
-		numar3.denominator = numar1.denominator * numar2.denominator;
+		//Rational_number numar3;
+		//numar3.numerator = numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator;
+		//numar3.denominator = numar1.denominator * numar2.denominator;
 
-		return (Rational_number(numar3.numerator, numar3.denominator));
+		return (Rational_number(numar1.numerator * numar2.denominator - numar2.numerator * numar1.denominator, numar1.denominator * numar2.denominator));
 	}
 
 	

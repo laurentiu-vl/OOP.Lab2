@@ -8,7 +8,13 @@ using namespace std;
 
 int main()
 {
-	test();
+	testAdd();
+
+	testDecre();
+
+	testDivi();
+
+	testMulti();
 
 	add();
 
@@ -18,7 +24,7 @@ int main()
 
 	decre();
 
-
+	//Rational_number(2, 4).print();
 	//Rational_number numar(5, 5);
 	//Rational_number numar1(-19, 1);
 	//Rational_number numar2(1,1);
